@@ -31,7 +31,8 @@ from components.invscattering import InverseScattering
 
 def main(num_segments=5):
     # Initialize the device (GPU if available, otherwise CPU)
-    device = tc.device("cuda:0" if tc.cuda.is_available() else "cpu")
+    # device = tc.device("cuda:0" if tc.cuda.is_available() else "cpu")
+    device = "cpu"
     print("Using device:", device)
 
     num_freq_samples = num_segments * 2 # at leas num_segments+1
